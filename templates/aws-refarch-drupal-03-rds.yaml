@@ -103,7 +103,8 @@ Resources:
       BackupRetentionPeriod: 30
       DatabaseName: !Ref DatabaseName
       DBSubnetGroupName: !Ref DataSubnetGroup
-      Engine: aurora
+      Engine: mysql
+      EngineVersion: "8.0.33"
       MasterUsername: !Ref DatabaseMasterUsername
       MasterUserPassword: !Ref DatabaseMasterPassword
       Port: 3306
@@ -121,7 +122,8 @@ Resources:
       DBClusterIdentifier: !Ref DatabaseCluster
       DBInstanceClass: !Ref DatabaseInstanceType
       DBSubnetGroupName: !Ref DataSubnetGroup
-      Engine: aurora
+      Engine: mysql
+      EngineVersion: "8.0.33"
       Tags:
         - Key: Name
           Value: !Join [ '', [ 'Drupal / ', !Ref 'AWS::StackName' ] ]
@@ -134,7 +136,8 @@ Resources:
       DBClusterIdentifier: !Ref DatabaseCluster
       DBInstanceClass: !Ref DatabaseInstanceType
       DBSubnetGroupName: !Ref DataSubnetGroup
-      Engine: aurora
+      Engine: mysql
+      EngineVersion: "8.0.33"
       Tags:
         - Key: Name
           Value: !Join [ '', [ 'Drupal / ', !Ref 'AWS::StackName' ] ]
